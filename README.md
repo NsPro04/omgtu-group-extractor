@@ -2,5 +2,5 @@
 
 // накидан на коленке, залит просто чтоб не потерялся.
 
-C++23
+C++23  
 spdlog + onetbb + openssl + cpp-httplib + nlohmann_json + asio
