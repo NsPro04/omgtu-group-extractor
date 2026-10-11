@@ -1,0 +1,44 @@
+BasedOnStyle: LLVM
+
+AlignAfterOpenBracket: true
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveBitFields: Consecutive
+AlignEscapedNewlines: Right
+AlignOperands: Align
+AlignTrailingComments: true
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortFunctionsOnASingleLine: All
+AllowShortLambdasOnASingleLine: All
+BinPackArguments: false
+BinPackParameters: false
+BreakBeforeConceptDeclarations: Always
+BreakInheritanceList: AfterColon
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: Always
+IndentWrappedFunctionNames: false
+IndentRequiresClause: true
+InsertTrailingCommas: Wrapped
+KeepEmptyLines:
+  AtEndOfFile:     false
+  AtStartOfBlock:  false
+  AtStartOfFile:   true
+MaxEmptyLinesToKeep: 1
+PackConstructorInitializers: NextLine
+PenaltyIndentedWhitespace: 2
+SortIncludes:
+  Enabled:         false
+  IgnoreCase:      false
+  IgnoreExtension: false
+SpacesInAngles: Leave
+BreakTemplateDeclarations: Yes
+ReflowComments: IndentOnly
+
+Standard: Latest
+
+PointerAlignment: Right
+ReferenceAlignment: Pointer
+
+IndentPPDirectives: AfterHash
+
+ColumnLimit: 200

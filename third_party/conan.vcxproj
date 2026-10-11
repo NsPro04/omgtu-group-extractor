@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <OutDir>$(SolutionDir)\dist\$(Configuration)\Bin\</OutDir>
+    <ProjectGuid>{FFF4EE0B-08E5-67FF-C41C-2CB459D0AD90}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Target Name="CreateRecipeFile" />
+  <Target Name="InitializeBuildStatus" />
+  <Target Name="FinalizeBuildStatus" />
+  <Target Name="CustomBuildStep" />
+  <Target Name="PrepareForBuild" />
+  <Target Name="CoreCppClean" />
+  <Target Name="IncrementalClean" />
+  <Target Name="_CleanRecordFileWrites" />
+  <Target Name="CoreClean" />
+  <ItemDefinitionGroup>
+    <BuildLog>
+      <Path>./conan/$(MSBuildProjectName).log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <PreBuildEvent>
+      <Command>
+        "conan" install "." -pr:a="./default" -s:a="build_type=$(Configuration)" -s:a="compiler.runtime_type=$(Configuration)" --build=missing --deployer=runtime_deploy --deployer-folder="$(SolutionDir)\dist/$(Configuration)/Bin/"
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+</Project>

@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="omgtu-group-extractor/omgtu-group-extractor.vcxproj" />
+  <Project Path="third_party/conan.vcxproj" />
+</Solution>
